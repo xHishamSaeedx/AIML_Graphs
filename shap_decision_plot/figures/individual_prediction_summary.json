@@ -1,0 +1,13 @@
+{
+  "sample_index": 3,
+  "predicted_default_probability": 0.800511692083325,
+  "shap_outputs": {
+    "force_plot": "C:/Users/m_his/OneDrive/Pictures/Documents/GitHub/AIML_Graphs/shap_decision_plot/figures/shap_force_plot.html",
+    "decision_plot": "C:/Users/m_his/OneDrive/Pictures/Documents/GitHub/AIML_Graphs/shap_decision_plot/figures/shap_decision_plot.png",
+    "base_value": 0.22877542357945754
+  },
+  "lime_outputs": {
+    "lime_plot": "C:/Users/m_his/OneDrive/Pictures/Documents/GitHub/AIML_Graphs/shap_decision_plot/figures/lime_local_explanation.png",
+    "lime_weights": "C:/Users/m_his/OneDrive/Pictures/Documents/GitHub/AIML_Graphs/shap_decision_plot/figures/lime_local_explanation.json"
+  }
+}
