@@ -8,6 +8,7 @@ that teaches what to look for during training.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Callable
 
 import matplotlib.pyplot as plt
@@ -173,6 +174,11 @@ def plot_metric_curves(num_epochs: int = 50) -> None:
         ax.axis("off")
 
     fig.tight_layout(pad=2.5, w_pad=2.0, h_pad=3.0)
+
+    output_path = Path(__file__).with_suffix(".png")
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    print(f"Metric curve figure saved to {output_path}")
+
     plt.show()
 
 

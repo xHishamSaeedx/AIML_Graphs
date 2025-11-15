@@ -7,6 +7,8 @@ medical imaging. Each scenario captures a distinct diagnostic pattern—from
 healthy performance to severe pathology—and shows what to look for.
 """
 
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -198,6 +200,11 @@ def plot_confusion_matrices():
         )
 
     fig.subplots_adjust(top=0.95, bottom=0.12, hspace=0.85, wspace=0.4, left=0.08, right=0.95)
+
+    output_path = Path(__file__).with_suffix(".png")
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    print(f"Confusion matrix figure saved to {output_path}")
+
     plt.show()
 
 

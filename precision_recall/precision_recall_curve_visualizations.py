@@ -7,6 +7,8 @@ recommender systems, and anomaly detection. Each scenario uses synthetic data to
 highlight a specific behaviour or pitfall.
 """
 
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import precision_recall_curve
@@ -262,6 +264,11 @@ def main():
             )
 
     fig.tight_layout(pad=4.0, h_pad=3.0, w_pad=2.5)
+
+    output_path = Path(__file__).with_suffix(".png")
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    print(f"Precision-Recall figure saved to {output_path}")
+
     plt.show()
 
 

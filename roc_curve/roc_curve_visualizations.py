@@ -10,6 +10,8 @@ dataset class balance.
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
@@ -217,6 +219,11 @@ def main():
 
     fig.suptitle("Synthetic ROC Curve Scenarios", fontsize=20, y=0.94)
     fig.subplots_adjust(top=0.90, hspace=0.35, wspace=0.25)
+
+    output_path = Path(__file__).with_suffix(".png")
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    print(f"ROC curve figure saved to {output_path}")
+
     plt.show()
 
 
